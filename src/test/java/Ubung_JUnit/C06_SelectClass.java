@@ -4,6 +4,7 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.support.ui.Select;
 
 import java.time.Duration;
@@ -18,8 +19,8 @@ public class C06_SelectClass {
       //bunlara dropDown denir,select Class'indan yararlanarak yapilir,bu bir class ise
      //kullanmak icin obje olustirmaya ihtiyac vardir
 
-        System.setProperty("webdriver.chrome.driver","Resources/Drivers/chromedriver.exe");
-        WebDriver driver=new ChromeDriver();
+        System.setProperty("geckodriver.exe","Resources/Drivers/geckodriver.exe");
+        WebDriver driver=new FirefoxDriver();
         driver.manage().window().maximize();
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(15));
 
